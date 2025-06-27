@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs and Cache
+*.log
+*.db
+*.sqlite3
+.cache/
+logs/
+*.log
+*.bak
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# FAISS Index or Vector DB files (if saved locally)
+*.faiss
+*.index
+*.hnsw
+
+# Streamlit (if used)
+.streamlit/
+
+# Misc
+*.pdf
+*.zip
+*.tar.gz
