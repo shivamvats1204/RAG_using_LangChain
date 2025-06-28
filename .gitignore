@@ -41,6 +41,5 @@ logs/
 .streamlit/
 
 # Misc
-*.pdf
 *.zip
 *.tar.gz
