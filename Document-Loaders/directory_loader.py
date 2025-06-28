@@ -6,8 +6,15 @@ loader = DirectoryLoader(
     loader_cls=PyPDFLoader,
 )
 
-docs = loader.load()
+# uncomment the following lines to use the loader (eager loading)
+# docs = loader.load()
+# for document in docs:
+#     print(document.metadata)
+# print("\n The last document content is:", document.page_content, sep="\n")
 
-print("No. of documents loaded:", len(docs))
 
-print("\nLast document content is:", docs[-1].page_content, sep="\n")
+# following lines for lazy loading
+docs = loader.lazy_load()
+for document in docs:
+    print(document.metadata)
+print("\n The last document content is:", document.page_content, sep="\n")
