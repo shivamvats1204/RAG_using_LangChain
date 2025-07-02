@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# uncomment the following lines to use OpenAI embeddings 
 # splitter = SemanticChunker(
 #     OpenAIEmbeddings(),
 #     breakpoint_threshold_type="standard_deviation",
