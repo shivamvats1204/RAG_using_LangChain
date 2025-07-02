@@ -1,6 +1,6 @@
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai import OpenAIEmbeddings
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,7 +21,7 @@ embeddings = HuggingFaceEmbeddings(
 splitter = SemanticChunker(
     embeddings,
     breakpoint_threshold_type="standard_deviation",
-    breakpoint_threshold_amount=1
+    breakpoint_threshold_amount=0.45
 )
 
 text = """
@@ -32,4 +32,4 @@ Meanwhile, in fields like healthcare and finance, AI is being used to analyze co
 
 docs = splitter.create_documents([text]) # Create documents from the text
 print(len(docs))  # Print the number of documents created
-print(docs[0].page_content)  # Print the content of the first document
+print(docs)  # Print the content of the first document
